@@ -6,7 +6,7 @@ namespace Gerenciamento_Hotel
     {
         static void Main(string[] args)
         {
-            int opção;
+            int opcao;
 
             AcessoBD funcionario = new AcessoBD();
 
@@ -32,33 +32,33 @@ namespace Gerenciamento_Hotel
                     Console.WriteLine("|----------------------------------|\n");
  
                     Console.WriteLine("Digite a opção desejada: \n");
-                    opção = int.Parse(Console.ReadLine());
+                    opcao = int.Parse(Console.ReadLine());
 
-                    if ((opção != 0) && (opção != 1) && (opção != 2) && (opção != 3) && (opção != 4) && (opção != 5))
+                    if ((opcao != 0) && (opcao != 1) && (opcao != 2) && (opcao != 3) && (opcao != 4) && (opcao != 5))
                     {               
                         Console.WriteLine("ERRO!!! Não é uma das opções disponíveis!!\n-> Digite novamente \n");
                     }
-                    if (opção == 1)
+                    if (opcao == 1)
                     {
                         informacoesHotel();
                     }
-                    if (opção == 2)
+                    if (opcao == 2)
                     {
                         verificaQuartos();
                     }
-                    if (opção == 3)
+                    if (opcao == 3)
                     {
                         cadastrarFuncionario();
                     }
-                    if (opção == 4)
+                    if (opcao == 4)
                     {
                         altera();
                     }
-                    if (opção == 5)
+                    if (opcao == 5)
                     {
                         deleta();
                     }
-                } while (opção != 0);
+                } while (opcao != 0);
             }
  
             void informacoesHotel()
