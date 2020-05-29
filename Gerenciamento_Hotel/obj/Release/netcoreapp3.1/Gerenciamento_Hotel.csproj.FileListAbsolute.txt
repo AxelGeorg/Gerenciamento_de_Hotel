@@ -33,3 +33,4 @@ C:\Users\fe_ma\angular\atividades_c#\Gerenciamento_Hotel\Gerenciamento_Hotel\obj
 C:\Users\fe_ma\angular\atividades_c#\Gerenciamento_Hotel\Gerenciamento_Hotel\obj\Release\netcoreapp3.1\Gerenciamento_Hotel.dll
 C:\Users\fe_ma\angular\atividades_c#\Gerenciamento_Hotel\Gerenciamento_Hotel\obj\Release\netcoreapp3.1\Gerenciamento_Hotel.pdb
 C:\Users\fe_ma\angular\atividades_c#\Gerenciamento_Hotel\Gerenciamento_Hotel\obj\Release\netcoreapp3.1\Gerenciamento_Hotel.genruntimeconfig.cache
+C:\Users\fe_ma\angular\atividades_c#\Gerenciamento_Hotel\Gerenciamento_Hotel\obj\Release\netcoreapp3.1\Gerenciamento_Hotel.csprojAssemblyReference.cache
