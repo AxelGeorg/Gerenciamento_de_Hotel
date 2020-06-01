@@ -6,23 +6,13 @@ namespace Gerenciamento_Hotel
     {
         static void Main(string[] args)
         {
-            int opcao, opcao_painel;
+            int opcao;
 
             funcionarioDAO funcionario = new funcionarioDAO();
 
-            painel();
+            telaPainel();
 
-
-
-
-
-
-
-    
-
-
-
-            void painel()
+            void telaPainel()
             {
                 do
                 {
@@ -38,7 +28,7 @@ namespace Gerenciamento_Hotel
                     Console.WriteLine("|----------------------------------|\n");
  
                     Console.WriteLine(" - Digite a opção desejada: \n");
-                    opcao_painel = int.Parse(Console.ReadLine());
+                    opcao = int.Parse(Console.ReadLine());
 
                     if ((opcao != 0) && (opcao != 1) && (opcao != 2))
                     {               
@@ -46,22 +36,47 @@ namespace Gerenciamento_Hotel
                     }
                     if (opcao == 1)
                     {
-                        informacoesHotel();
+                        telaLogin();
                     }
                     if (opcao == 2)
                     {
-                        verificaQuartos();
+                       
                     }
-
-                }while(opcao_painel != 0);
+                }while(opcao != 0);
             }
+            
+
+            void telaLogin()
+            {
+                string login = "ceo";
+                string senha = "pastel";
+                string digitadoLogin, digitadoSenha;
+                int cont = 0;
+                do
+                {
+                    Console.WriteLine("|----------------------------------|\n");
+                    Console.WriteLine("|          -Tela de Login-         |\n");
+                    Console.WriteLine("|----------------------------------|\n");
+                    Console.WriteLine("|Login:                    ");
+                    digitadoLogin = Console.ReadLine();
+                    Console.WriteLine("\n|Senha:                    ");
+                    digitadoSenha = Console.ReadLine();
 
 
-
-
-
-
-
+                    if ((digitadoLogin != login) || (digitadoSenha != senha))
+                    {               
+                        Console.WriteLine("ERRO!!! Não é uma das opções disponíveis!!\n-> Digite novamente \n");
+                    }else if ((digitadoLogin == login) && (digitadoSenha == senha))
+                    {
+                        painelDoHotel();
+                    }
+                    cont++;
+                    if (cont == 3)
+                    {
+                        Console.WriteLine("\n\n -> Foram utilizadas 3 tentativas!!!\n\n");
+                    }
+                }while(cont != 3);
+            }
 
 
 
@@ -125,7 +140,7 @@ namespace Gerenciamento_Hotel
             void funcionarios()
             {
                 int opcao_fun,fun_id;
-                string fun_nome, fun_nomeNovo, fun_sobrenome, fun_sobrenomeNovo, fun_titulo , fun_tituloNovo;
+                string fun_nome, fun_nomeNovo, fun_sobrenome, fun_sobrenomeNovo, fun_cpf, fun_cpfNovo, fun_titulo , fun_tituloNovo;
                 bool resposta;
 
                 do
@@ -161,10 +176,12 @@ namespace Gerenciamento_Hotel
                         fun_nome = Console.ReadLine();
                         Console.WriteLine("\n\nDigite o sobrenome do funcionario: \n");
                         fun_sobrenome = Console.ReadLine();
+                        Console.WriteLine("\n\nDigite o cpf do funcionario: \n");
+                        fun_cpf = Console.ReadLine();
                         Console.WriteLine("\n\nDigite o título do funcionario: \n");
                         fun_titulo = Console.ReadLine();
 
-                        resposta = funcionario.inserirFuncionario(fun_nome, fun_sobrenome, fun_titulo);
+                        resposta = funcionario.inserirFuncionario(fun_nome, fun_sobrenome, fun_cpf, fun_titulo);
 
                         if (resposta)
                         {
@@ -262,8 +279,10 @@ namespace Gerenciamento_Hotel
                                 fun_sobrenomeNovo = Console.ReadLine();
                                 Console.WriteLine("\n\nDigite o novo titulo do funcionario: \n");
                                 fun_tituloNovo = Console.ReadLine();
+                                Console.WriteLine("\n\nDigite o novo cpf do funcionario: \n");
+                                fun_cpfNovo = Console.ReadLine();
 
-                                resposta = funcionario.alterarTudoFuncionario(fun_id, fun_nomeNovo, fun_sobrenomeNovo, fun_tituloNovo);
+                                resposta = funcionario.alterarTudoFuncionario(fun_id, fun_nomeNovo, fun_sobrenomeNovo, fun_cpfNovo, fun_tituloNovo);
 
                                 if (resposta)
                                 {
