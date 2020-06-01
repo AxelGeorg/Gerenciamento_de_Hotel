@@ -6,11 +6,62 @@ namespace Gerenciamento_Hotel
     {
         static void Main(string[] args)
         {
-            int opcao;
+            int opcao, opcao_painel;
 
             funcionarioDAO funcionario = new funcionarioDAO();
 
-            painelDoHotel();
+            painel();
+
+
+
+
+
+
+
+    
+
+
+
+            void painel()
+            {
+                do
+                {
+
+                    Console.WriteLine("\n\n----- Bem vindo ao hotel -----\n\n");
+
+                    Console.WriteLine("|----------------------------------|\n");
+                    Console.WriteLine("|             -Painel-             |\n");
+                    Console.WriteLine("|----------------------------------|\n");
+                    Console.WriteLine("|    1 - Login                     |\n");
+                    Console.WriteLine("|    2 - Informações do hotel      |\n");
+                    Console.WriteLine("|    0 - Sair...                   |\n");
+                    Console.WriteLine("|----------------------------------|\n");
+ 
+                    Console.WriteLine(" - Digite a opção desejada: \n");
+                    opcao_painel = int.Parse(Console.ReadLine());
+
+                    if ((opcao != 0) && (opcao != 1) && (opcao != 2))
+                    {               
+                        Console.WriteLine("ERRO!!! Não é uma das opções disponíveis!!\n-> Digite novamente \n");
+                    }
+                    if (opcao == 1)
+                    {
+                        informacoesHotel();
+                    }
+                    if (opcao == 2)
+                    {
+                        verificaQuartos();
+                    }
+
+                }while(opcao_painel != 0);
+            }
+
+
+
+
+
+
+
 
 
 

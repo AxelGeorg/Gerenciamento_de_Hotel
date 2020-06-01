@@ -10,5 +10,13 @@ namespace Gerenciamento_Hotel.Entidades
         public string fun_nome { get; set; }
         public string fun_sobrenome { get; set; }
         public string fun_titulo { get; set; }
+
+        public Funcionario(int id, string nome, string sobrenome, string titulo){
+            this.fun_id = id;
+            this.fun_nome = nome;
+            this.fun_sobrenome = sobrenome;
+            this.fun_titulo = titulo;
+        }
+
     }
 }

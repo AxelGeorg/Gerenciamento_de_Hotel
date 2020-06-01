@@ -34,7 +34,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
-
         public bool listarFuncionarios()
         {
             try
@@ -57,7 +56,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
-
         public bool alterarNomeFuncionario(int fun_id,string fun_nome)
         {
             try
@@ -80,7 +78,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
-        
         public bool alterarSobrenomeFuncionario(int fun_id,string fun_sobrenome)
         {
             try
@@ -125,7 +122,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
-
         public bool alterarTudoFuncionario(int fun_id,string fun_nome, string fun_sobrenome, string fun_titulo)
         {
             try
@@ -148,7 +144,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
-
         public bool deletarFuncionario(int fun_id)
         {
             try
@@ -171,5 +166,6 @@ namespace Gerenciamento_Hotel
                 return false;
             }
         }
+    
     }
 }
